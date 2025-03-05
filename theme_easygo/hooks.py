@@ -226,4 +226,3 @@ app_include_css = "/assets/theme_easygo/css/theme_easygo.css"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
