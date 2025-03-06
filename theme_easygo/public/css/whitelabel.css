@@ -1,0 +1,38 @@
+/* Whitelabel CSS for Theme Easygo */
+
+/* This CSS will be dynamically updated by the whitelabel.py script */
+:root {
+  --navbar-bg-color: #083B77;
+  --navbar-title-custom-css: '';
+}
+
+/* Navbar customization */
+.navbar {
+  background-color: var(--navbar-bg-color) !important;
+}
+
+/* Hide help menu when configured */
+body.hide-help-menu .dropdown-help {
+  display: none !important;
+}
+
+/* Hide powered by text when configured */
+body.hide-powered-by .web-footer .footer-powered {
+  display: none !important;
+}
+
+/* Custom navbar title styling */
+.navbar-brand {
+  /* Will be populated by custom CSS from settings */
+}
+
+/* App logo size customization */
+.app-logo {
+  max-height: auto;
+  width: var(--app-logo-width, 30px);
+}
+
+/* Login page customizations */
+.for-login .page-card-head h4 {
+  /* Will be updated by the whitelabel.py script */
+}

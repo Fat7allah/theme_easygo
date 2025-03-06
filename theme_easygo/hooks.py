@@ -10,19 +10,21 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = "/assets/theme_easygo/css/theme_easygo.css"
-# app_include_js = "/assets/theme_easygos/js/corporate.js"
+app_include_css = [
+    "/assets/theme_easygo/css/theme_easygo.css",
+    "/assets/theme_easygo/css/whitelabel.css",
+    "/files/whitelabel_custom.css"
+]
+app_include_js = [
+    "/assets/theme_easygo/js/whitelabel.js"
+]
 
 # include js, css files in header of web template
-# web_include_css = "/assets/theme_easygos/css/corporate.css"
+web_include_css = [
+    "/assets/theme_easygo/css/whitelabel.css",
+    "/files/whitelabel_custom.css"
+]
 # web_include_js = "/assets/theme_easygos/js/corporate.js"
-
-# include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "theme_easygos/public/scss/website"
-
-# include js, css files in header of web form
-# webform_include_js = {"doctype": "public/js/doctype.js"}
-# webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
@@ -122,13 +124,11 @@ app_include_css = "/assets/theme_easygo/css/theme_easygo.css"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Whitelabel Settings": {
+        "after_save": "theme_easygo.theme_easygo.utils.whitelabel.generate_whitelabel_css"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

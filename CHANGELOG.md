@@ -2,6 +2,21 @@
 
 ## [Unreleased] - 2025-03-06
 
+### Added
+- Added comprehensive whitelabel features:
+  - Change App logo with customizable width
+  - Change Favicon
+  - Change Splash Image
+  - Hide Help Menu
+  - Hide "powered by" text from the website
+  - Remove welcome page
+  - Update welcome blog post
+  - Adjust App logo size from Whitelabel setting page
+  - Update onboard steps to remove video and documentation link (Version 13)
+  - Manage Navbar Background color from Whitelabel setting
+  - Manage Custom Navbar Title and CSS for title from Whitelabel setting
+  - Change Login Page Title from Whitelabel Setting Page
+
 ### Fixed
 - Fixed theme not changing by correcting the CSS file reference in hooks.py
 - Renamed CSS file from `corporate_theme.css` to `theme_easygo.css` to match the reference in hooks.py

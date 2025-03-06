@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-06 22:52:26.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "app_logo_section",
+  "app_logo",
+  "app_logo_width",
+  "column_break_4",
+  "favicon",
+  "splash_image",
+  "login_page_section",
+  "login_page_title",
+  "hide_powered_by",
+  "navbar_settings_section",
+  "navbar_background_color",
+  "navbar_title",
+  "navbar_title_css",
+  "other_settings_section",
+  "hide_help_menu",
+  "remove_welcome_page",
+  "update_welcome_blog"
+ ],
+ "fields": [
+  {
+   "fieldname": "app_logo_section",
+   "fieldtype": "Section Break",
+   "label": "App Logo Settings"
+  },
+  {
+   "fieldname": "app_logo",
+   "fieldtype": "Attach Image",
+   "label": "App Logo"
+  },
+  {
+   "default": "30",
+   "fieldname": "app_logo_width",
+   "fieldtype": "Int",
+   "label": "App Logo Width (px)"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "favicon",
+   "fieldtype": "Attach Image",
+   "label": "Favicon"
+  },
+  {
+   "fieldname": "splash_image",
+   "fieldtype": "Attach Image",
+   "label": "Splash Image"
+  },
+  {
+   "fieldname": "login_page_section",
+   "fieldtype": "Section Break",
+   "label": "Login Page Settings"
+  },
+  {
+   "default": "Login",
+   "fieldname": "login_page_title",
+   "fieldtype": "Data",
+   "label": "Login Page Title"
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_powered_by",
+   "fieldtype": "Check",
+   "label": "Hide \"Powered By\" Text"
+  },
+  {
+   "fieldname": "navbar_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Navbar Settings"
+  },
+  {
+   "default": "#083B77",
+   "fieldname": "navbar_background_color",
+   "fieldtype": "Color",
+   "label": "Navbar Background Color"
+  },
+  {
+   "fieldname": "navbar_title",
+   "fieldtype": "Data",
+   "label": "Custom Navbar Title"
+  },
+  {
+   "fieldname": "navbar_title_css",
+   "fieldtype": "Code",
+   "label": "Navbar Title CSS",
+   "options": "CSS"
+  },
+  {
+   "fieldname": "other_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Other Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_help_menu",
+   "fieldtype": "Check",
+   "label": "Hide Help Menu"
+  },
+  {
+   "default": "0",
+   "fieldname": "remove_welcome_page",
+   "fieldtype": "Check",
+   "label": "Remove Welcome Page"
+  },
+  {
+   "default": "0",
+   "fieldname": "update_welcome_blog",
+   "fieldtype": "Check",
+   "label": "Update Welcome Blog Post"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-03-06 22:52:26.000000",
+ "modified_by": "Administrator",
+ "module": "Theme Easygo",
+ "name": "Whitelabel Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
