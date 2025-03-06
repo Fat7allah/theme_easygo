@@ -44,16 +44,21 @@
 	border: 1px solid var(--blue-400) !important;
 }
 
-.for-login .btn-login{
-	background-color: var(--blue-800) !important;
-	border: none !important;
-	color: white;
+/* Force primary blue color on login button */
+.for-login .btn-login,
+.for-login .btn-primary,
+.for-login button[type="submit"] {
+	background-color: var(--btn-primary) !important;
+	border-color: var(--btn-primary) !important;
+	color: white !important;
 }
 
-.for-login .btn-login:hover{
-	background-color: var(--blue-600) !important;
-	border: none !important;
-	color: white;
+.for-login .btn-login:hover,
+.for-login .btn-primary:hover,
+.for-login button[type="submit"]:hover {
+	background-color: var(--secondary) !important;
+	border-color: var(--secondary) !important;
+	color: white !important;
 }
 
 .for-login .page-card-head h4 {
@@ -69,8 +74,17 @@
 	box-shadow: 0 0 0 1px var(--blue-300) !important;
 }
 
-.for-login .page-card .page-card-body .forgot-password-message>* {
-	color: var(--blue-600) !important;
+/* Ensure links on login page use the primary color */
+.for-login a, 
+.for-login .page-card-actions a,
+.for-login .page-card .page-card-body .forgot-password-message a {
+	color: var(--btn-primary) !important;
+}
+
+.for-login a:hover,
+.for-login .page-card-actions a:hover,
+.for-login .page-card .page-card-body .forgot-password-message a:hover {
+	color: var(--secondary) !important;
 }
 
 /* NAVBAR DESIGNE */
