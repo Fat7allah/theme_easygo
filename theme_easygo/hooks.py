@@ -21,6 +21,7 @@ app_include_js = [
 
 # include js, css files in header of web template
 web_include_css = [
+    "/assets/theme_easygo/css/theme_easygo.css",
     "/assets/theme_easygo/css/whitelabel.css",
     "/files/whitelabel_custom.css"
 ]
