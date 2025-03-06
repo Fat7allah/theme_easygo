@@ -80,7 +80,11 @@
 #navbar-breadcrumbs a,
 .navbar .nav-item button.nav-link{ 
 	color: var(--btn-default-hover-bg) !important;
+}
 
+/* Navbar brand (logo and text) - set to white */
+.navbar-brand {
+	color: white !important;
 }
 
 #navbar-breadcrumbs li.disabled a {
@@ -236,16 +240,16 @@ input[type="checkbox"]:checked {
 	border-radius: 0.25rem !important;
 }
 
-.btn.btn-primary{
-	color: var(--text-btn-color);
-	border: solid 2px var(--btn-primary) !important;
+.btn.btn-primary {
+	background-color: var(--btn-primary) !important;
+	border-color: var(--btn-primary) !important;
+	color: white !important;
 }
 
-.btn.btn-primary:hover {
-	background: var(--btn-default-hover-bg) !important;
-	border: solid 2px var(--btn-primary) !important;
-	color: var(--text-color);
-  }
+.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
+	background-color: var(--secondary) !important;
+	border-color: var(--secondary) !important;
+}
 
 .standard-actions .btn.btn-secondary{
 	background: var(--secondary) !important;
