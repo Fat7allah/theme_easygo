@@ -1,4 +1,3 @@
-
 /* Color Templetes */
 /*:root {
 	--bg-color:  #e5e8eb;
@@ -14,18 +13,18 @@
 	--text-base: 14px;
 }
 */
-/* TODO: Decide on color templetes and list the color codes here */
+/* Updated color scheme based on #083B77, #12549F, #F8F9FA */
 
 :root {
-	--bg-color:  #e5e8eb;
-	--btn-primary: #714B67;
-	--btn-secondary: #017E8480;
-	--secondary: #017E84;
-	--navbar-bg: #714B67;
+	--bg-color: #F8F9FA;
+	--btn-primary: #083B77;
+	--btn-secondary: #12549F80;
+	--secondary: #12549F;
+	--navbar-bg: #083B77;
 	--text-btn-color: white;
-	--table-border-color: #714b6740;
+	--table-border-color: #083B7740;
 	--btn-default-hover-bg: white;
-	--sidebar-select-color: #017E8420;
+	--sidebar-select-color: #12549F20;
 	--checkbox-gradient: linear-gradient(180deg, var(--btn-primary) -124.51%, var(--btn-primary) 100%);
 	--text-base: 14px;
 }
@@ -108,8 +107,8 @@ body, .page-container {
 
 .es-icon {
 	@extend .icon;
-	fill :  #017E8480 !important; 
-	stroke:  #017E8480 !important;
+	fill :  var(--btn-secondary) !important; 
+	stroke:  var(--btn-secondary) !important;
 }
 
 .page-content .layout-main-section{
@@ -126,12 +125,12 @@ body, .page-container {
 }
 
 .widget.links-widget-box, .widget.dashboard-widget-box {
-	border: 1px solid #714B6780;
+	border: 1px solid var(--btn-primary);
 }
 
 .widget.links-widget-box .widget-head .widget-label .widget-title{
 	background-color: white;
-	color: #714B67 !important;
+	color: var(--btn-primary) !important;
 }
 
 .widget-body .link-item{
@@ -190,17 +189,17 @@ a.onboard-spotlight .link-content:hover {
 }
 
 .form-control:focus, .form-control:hover{
-	box-shadow: 0 0 0 2px #714b6780 !important;
+	box-shadow: 0 0 0 2px var(--btn-secondary) !important;
 }
 
 .form-control:focus {
-	background-color: #714b6725;
+	background-color: var(--btn-secondary) !important;
 }
 
 .frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input:hover,
 .frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input:focus
 {
-	box-shadow: 0 0 0 2px #eb909180 !important;
+	box-shadow: 0 0 0 2px var(--btn-secondary) !important;
 }
 
 .frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input{
@@ -216,7 +215,7 @@ option {
 }
 
 .grid-row-open{
-	box-shadow: 0 0 0 3px #714b67 !important;
+	box-shadow: 0 0 0 3px var(--btn-secondary) !important;
 }
 
 .awesomplete [role="option"]:hover,  .awesomplete li:hover{
@@ -239,12 +238,12 @@ input[type="checkbox"]:checked {
 
 .btn.btn-primary{
 	color: var(--text-btn-color);
-	border: solid 2px #714b67 !important;
+	border: solid 2px var(--btn-primary) !important;
 }
 
 .btn.btn-primary:hover {
 	background: var(--btn-default-hover-bg) !important;
-	border: solid 2px #714b67 !important;
+	border: solid 2px var(--btn-primary) !important;
 	color: var(--text-color);
   }
 
@@ -291,14 +290,14 @@ input[type="checkbox"]:checked {
 }
 
 .btn.btn-new-doc{
-	background-color: #714b67 !important;
+	background-color: var(--btn-primary) !important;
 	color: var(--text-btn-color);
-	border: solid 2px #714b67 !important;
+	border: solid 2px var(--btn-primary) !important;
 }
 
 .btn.btn-new-doc:hover{
 	background: var(--btn-default-hover-bg) !important;
-	border: solid 2px #714b67 !important;
+	border: solid 2px var(--btn-primary) !important;
 	color: var(--text-color);
 }
 
