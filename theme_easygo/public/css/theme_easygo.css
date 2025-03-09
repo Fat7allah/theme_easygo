@@ -205,6 +205,8 @@ html body .standard-filter-section .form-control:hover {
 }
 
 /*  FORM DESIGN  */
+
+/* Form control styles */
 html body .form-control, 
 html body .frappe-control .ql-editor:not(.read-mode){
 	box-shadow: 0 0 0 1px rgba(124, 124, 124, 0.25) !important;
@@ -220,7 +222,7 @@ html body .ace_editor:focus{
 }
 
 html body .form-control:focus, 
-html body .form-control:hover{
+html body .form-control:hover {
 	box-shadow: 0 0 0 2px var(--btn-secondary) !important;
 }
 
@@ -228,6 +230,15 @@ html body .form-control:focus {
 	background-color: var(--btn-secondary) !important;
 }
 
+/* Specific styles for search bar that override the general form control styles */
+html body .search-bar .awesomplete input:focus {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    box-shadow: var(--awesomebar-shadow) !important;
+    background-color: var(--awesomebar-focus-bg) !important;
+}
+
+/* Error handling styles */
 html body .frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input:hover,
 html body .frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input:focus
 {
