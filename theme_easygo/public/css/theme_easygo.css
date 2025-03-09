@@ -113,47 +113,7 @@ html body .nav-tabs{
 	border:none;
 }
 
-/* Prevent navbar search color change - more comprehensive targeting */
-html body .navbar .search-bar,
-html body .navbar .search-bar:hover,
-html body .navbar .search-bar:focus,
-html body .navbar .search-bar:active,
-html body .navbar .search-bar.focus,
-html body .navbar .search-bar.show,
-html body .navbar .search-bar.show:focus,
-html body .navbar .search-bar.show:active {
-	background-color: transparent !important;
-	border-color: transparent !important;
-	box-shadow: none !important;
-	color: var(--btn-default-hover-bg) !important;
-}
-
-html body .navbar .search-bar .search-icon,
-html body .navbar .search-bar .search-icon:hover,
-html body .navbar .search-bar .search-icon:focus,
-html body .navbar .search-bar .search-icon:active {
-	background-color: transparent !important;
-	color: var(--btn-default-hover-bg) !important;
-}
-
-html body .navbar .search-bar .form-control,
-html body .navbar .search-bar .form-control:focus,
-html body .navbar .search-bar .form-control:active,
-html body .navbar .search-bar.show .form-control,
-html body .navbar .search-bar.show .form-control:focus {
-	background-color: transparent !important;
-	border-color: transparent !important;
-	box-shadow: none !important;
-	color: var(--btn-default-hover-bg) !important;
-}
-
-html body .navbar .search-bar .search-icon svg,
-html body .navbar .search-bar .search-icon svg path {
-	fill: var(--btn-default-hover-bg) !important;
-	stroke: var(--btn-default-hover-bg) !important;
-}
-
-html body .navbar .search-bar span {
+html body .search-bar span {
 	color: var(--neutral-black) !important;
 }
 
