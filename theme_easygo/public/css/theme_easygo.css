@@ -31,144 +31,190 @@
 
 /* login page */
 
-[data-path="login"] .navbar-light {
+/* Override Frappe's login.bundle.css with more specific selectors */
+html body [data-path="login"] .navbar-light {
 	border-bottom: 1px solid var(--blue-400) !important;
 	background: white;
 }
 
-[data-path="login"] .web-footer {
+html body [data-path="login"] .web-footer {
 	border-top: 1px solid var(--blue-400) !important;
 }
 
-.for-login .page-card {
+html body .for-login .page-card {
 	border: 1px solid var(--blue-400) !important;
 }
 
-/* Force primary blue color on login button */
-.for-login .btn-login,
-.for-login .btn-primary,
-.for-login button[type="submit"] {
+/* Force primary blue color on login button with higher specificity */
+html body .for-login .btn-login,
+html body .for-login .btn-primary,
+html body .for-login button[type="submit"],
+html body .for-login .btn.btn-primary {
 	background-color: var(--btn-primary) !important;
 	border-color: var(--btn-primary) !important;
 	color: white !important;
 }
 
-.for-login .btn-login:hover,
-.for-login .btn-primary:hover,
-.for-login button[type="submit"]:hover {
+html body .for-login .btn-login:hover,
+html body .for-login .btn-primary:hover,
+html body .for-login button[type="submit"]:hover,
+html body .for-login .btn.btn-primary:hover {
 	background-color: var(--secondary) !important;
 	border-color: var(--secondary) !important;
 	color: white !important;
 }
 
-.for-login .page-card-head h4 {
+html body .for-login .page-card-head h4 {
 	color: black !important;
 }
 
-.for-login .form-control, .for-login .form-control{
+html body .for-login .form-control, 
+html body .for-login .form-control {
 	background-color: white !important;
 	border: solid 1px var(--blue-400) !important;
 }
 
-.for-login .form-control:focus, .for-login .form-control:hover{
+html body .for-login .form-control:focus, 
+html body .for-login .form-control:hover {
 	box-shadow: 0 0 0 1px var(--blue-300) !important;
 }
 
 /* Ensure links on login page use the primary color */
-.for-login a, 
-.for-login .page-card-actions a,
-.for-login .page-card .page-card-body .forgot-password-message a {
+html body .for-login a, 
+html body .for-login .page-card-actions a,
+html body .for-login .page-card .page-card-body .forgot-password-message a {
 	color: var(--btn-primary) !important;
 }
 
-.for-login a:hover,
-.for-login .page-card-actions a:hover,
-.for-login .page-card .page-card-body .forgot-password-message a:hover {
+html body .for-login a:hover,
+html body .for-login .page-card-actions a:hover,
+html body .for-login .page-card .page-card-body .forgot-password-message a:hover {
 	color: var(--secondary) !important;
 }
 
 /* NAVBAR DESIGNE */
 
-.navbar .navbar-expand span, 
-.navbar .navbar-expand li a,
-#navbar-breadcrumbs a,
-.navbar .nav-item button.nav-link{ 
+html body .navbar .navbar-expand span, 
+html body .navbar .navbar-expand li a,
+html body #navbar-breadcrumbs a,
+html body .navbar .nav-item button.nav-link{ 
 	color: var(--btn-default-hover-bg) !important;
 }
 
-/* Navbar brand (logo and text) - set to white */
-.navbar-brand {
+html body .navbar-brand {
 	color: white !important;
 }
 
-#navbar-breadcrumbs li.disabled a {
+html body #navbar-breadcrumbs li.disabled a {
   color: var(--white-overlay-400) !important;
 }
 
-.nav-tabs{ 
+html body .nav-tabs{ 
 	border:none;
 }
 
-.search-bar span {
+/* Prevent navbar search color change - more comprehensive targeting */
+html body .navbar .search-bar,
+html body .navbar .search-bar:hover,
+html body .navbar .search-bar:focus,
+html body .navbar .search-bar:active,
+html body .navbar .search-bar.focus,
+html body .navbar .search-bar.show,
+html body .navbar .search-bar.show:focus,
+html body .navbar .search-bar.show:active {
+	background-color: transparent !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+	color: var(--btn-default-hover-bg) !important;
+}
+
+html body .navbar .search-bar .search-icon,
+html body .navbar .search-bar .search-icon:hover,
+html body .navbar .search-bar .search-icon:focus,
+html body .navbar .search-bar .search-icon:active {
+	background-color: transparent !important;
+	color: var(--btn-default-hover-bg) !important;
+}
+
+html body .navbar .search-bar .form-control,
+html body .navbar .search-bar .form-control:focus,
+html body .navbar .search-bar .form-control:active,
+html body .navbar .search-bar.show .form-control,
+html body .navbar .search-bar.show .form-control:focus {
+	background-color: transparent !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+	color: var(--btn-default-hover-bg) !important;
+}
+
+html body .navbar .search-bar .search-icon svg,
+html body .navbar .search-bar .search-icon svg path {
+	fill: var(--btn-default-hover-bg) !important;
+	stroke: var(--btn-default-hover-bg) !important;
+}
+
+html body .navbar .search-bar span {
 	color: var(--neutral-black) !important;
 }
 
 /* PAGE DESIGN */
 
-body, .page-container { 
+html body body, 
+html body .page-container { 
 	background-color: var(--bg-color) !important;
 }
 
-.page-head { 
+html body .page-head { 
 	background-color: white !important;
 }
 
-.es-icon {
+html body .es-icon {
 	@extend .icon;
 	fill :  var(--btn-secondary) !important; 
 	stroke:  var(--btn-secondary) !important;
 }
 
-.page-content .layout-main-section{
+html body .page-content .layout-main-section{
         background-color: white;
 }
 
-.datatable .dt-cell {
+html body .datatable .dt-cell {
   background-color: #fff !important;
 }
 
 /* DASHBOARD DESIGN */
-.desk-sidebar-item{
+html body .desk-sidebar-item{
 	line-height: 2.2;
 }
 
-.widget.links-widget-box, .widget.dashboard-widget-box {
+html body .widget.links-widget-box, 
+html body .widget.dashboard-widget-box {
 	border: 1px solid var(--btn-primary);
 }
 
-.widget.links-widget-box .widget-head .widget-label .widget-title{
+html body .widget.links-widget-box .widget-head .widget-label .widget-title{
 	background-color: white;
 	color: var(--btn-primary) !important;
 }
 
-.widget-body .link-item{
+html body .widget-body .link-item{
 	margin-bottom: 5px !important;
 }
 
-.icon-md {
+html body .icon-md {
 	width: 30px;
 	height: 30px;
 }
 
-.onboard-spotlight {
+html body .onboard-spotlight {
 	color: var(--secondary) !important;
 }
 
-a.onboard-spotlight .link-content:hover {
+html body a.onboard-spotlight .link-content:hover {
 	color: var(--btn-secondary) !important;
 }
 
-.dropdown-notifications .es-icon{
+html body .dropdown-notifications .es-icon{
 	@extend .icon;
 	fill :  white !important; 
 	stroke:  white !important;
@@ -176,181 +222,199 @@ a.onboard-spotlight .link-content:hover {
 
 /* LIST GRID DESIGN */
 
-.list-filters .form-control, .standard-filter-section .form-control, .standard-filter-section .form-control {
+html body .list-filters .form-control, 
+html body .standard-filter-section .form-control, 
+html body .standard-filter-section .form-control {
 	box-shadow: 0 0 0 1px rgba(124, 124, 124, 0.25) !important;
 }
 
-.level.list-row-head, .level.list-row-head .level-item {
+html body .level.list-row-head, 
+html body .level.list-row-head .level-item {
 	font-weight:light;
 	background-color: var(--gray-300);
 }
-.list-row-container .list-row:hover{
+html body .list-row-container .list-row:hover{
 	background-color: var(--sidebar-select-color);
 }
 
-.list-filters .form-control:focus, .list-filters .form-control:hover,
-.standard-filter-section .form-control:focus, .standard-filter-section .form-control:hover {
+html body .list-filters .form-control:focus, 
+html body .list-filters .form-control:hover,
+html body .standard-filter-section .form-control:focus, 
+html body .standard-filter-section .form-control:hover {
 	box-shadow: 0 0 0 2px rgba(124, 124, 124, 0.25) !important;
 }
 
 /*  FORM DESIGN  */
-.form-control, .frappe-control .ql-editor:not(.read-mode){
+html body .form-control, 
+html body .frappe-control .ql-editor:not(.read-mode){
 	box-shadow: 0 0 0 1px rgba(124, 124, 124, 0.25) !important;
 }
 
-.ace_editor {
+html body .ace_editor {
 	box-shadow: 0 0 0 1px rgba(124, 124, 124, 0.25) !important;
 }
 
-.ql-editor:focus, .ace_editor:focus{
+html body .ql-editor:focus, 
+html body .ace_editor:focus{
 	box-shadow: 0 0 0 2px rgba(124, 124, 124, 0.25) !important;
 }
 
-.form-control:focus, .form-control:hover{
+html body .form-control:focus, 
+html body .form-control:hover{
 	box-shadow: 0 0 0 2px var(--btn-secondary) !important;
 }
 
-.form-control:focus {
+html body .form-control:focus {
 	background-color: var(--btn-secondary) !important;
 }
 
-.frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input:hover,
-.frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input:focus
+html body .frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input:hover,
+html body .frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input:focus
 {
 	box-shadow: 0 0 0 2px var(--btn-secondary) !important;
 }
 
-.frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input{
+html body .frappe-control:not([data-fieldtype="MultiSelectPills"]):not([data-fieldtype="Table MultiSelect"]).has-error input{
 	box-shadow: none !important;
 }
 
-option {
+html body option {
 	 background-color: white !important;
 }
 
-.grid-heading-row .filter-row, .awesomplete [role="listbox"] {
+html body .grid-heading-row .filter-row, 
+html body .awesomplete [role="listbox"] {
 	background-color: white !important;
 }
 
-.grid-row-open{
+html body .grid-row-open{
 	box-shadow: 0 0 0 3px var(--btn-secondary) !important;
 }
 
-.awesomplete [role="option"]:hover,  .awesomplete li:hover{
+html body .awesomplete [role="option"]:hover,  
+html body .awesomplete li:hover{
 	background-color: var(--gray-300) !important;
 }
 
-input[type="checkbox"]:checked {
+html body input[type="checkbox"]:checked {
 	background-color: var(--btn-secondary) !important;
 	background-image: url("data:image/svg+xml, <svg viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 4.00001L2.66667 5.80001L7 1.20001' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"),var(--checkbox-gradient) !important;
 }
 
-.datepicker {
+html body .datepicker {
 	 background-color: var(--bg-color) !important;
 }
 
 /* BUTTONS DESIGN */ 
-.btn{
+html body .btn{
 	border-radius: 0.25rem !important;
 }
 
-.btn.btn-primary {
+html body .btn.btn-primary {
 	background-color: var(--btn-primary) !important;
 	border-color: var(--btn-primary) !important;
 	color: white !important;
 }
 
-.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
+html body .btn.btn-primary:hover, 
+html body .btn.btn-primary:focus, 
+html body .btn.btn-primary:active {
 	background-color: var(--secondary) !important;
 	border-color: var(--secondary) !important;
 }
 
-.standard-actions .btn.btn-secondary{
+html body .standard-actions .btn.btn-secondary{
 	background: var(--secondary) !important;
         border: solid 2px var(--secondary) !important;
 	color: var(--text-btn-color);
 }
 
-.standard-actions .btn.btn-secondary:hover{
+html body .standard-actions .btn.btn-secondary:hover{
 	background: var(--btn-default-hover-bg) !important;
     	border: solid 2px var(--secondary) !important;
 	color: var(--text-color);
 }
 
-.custom-actions .btn.btn-default{
+html body .custom-actions .btn.btn-default{
 	background: var(--secondary) !important;
         border: solid 2px var(--secondary) !important;
 	color: var(--text-btn-color);
 }
 
-.custom-actions .btn.btn-default:hover{
+html body .custom-actions .btn.btn-default:hover{
 	background: var(--btn-default-hover-bg) !important;
     	border: solid 2px var(--secondary) !important;
 	color: var(--text-color);
 }
 
-.btn.btn-secondary .es-icon{
+html body .btn.btn-secondary .es-icon{
 	@extend .icon;
 	fill :  white !important; 
 	stroke:  white !important;
 }
 
-.btn.btn-default {
+html body .btn.btn-default {
 	background: var(--btn-default-hover-bg) !important;
     border: solid 1px var(--btn-secondary) !important;
     color: var(--text-color);
 }
 
-.btn.grid-add-row{
+html body .btn.grid-add-row{
 	background: var(--btn-default-hover-bg) !important;
     border: solid 1px var(--btn-secondary) !important;
     color: var(--text-color);
 }
 
-.btn.btn-new-doc{
+html body .btn.btn-new-doc{
 	background-color: var(--btn-primary) !important;
 	color: var(--text-btn-color);
 	border: solid 2px var(--btn-primary) !important;
 }
 
-.btn.btn-new-doc:hover{
+html body .btn.btn-new-doc:hover{
 	background: var(--btn-default-hover-bg) !important;
 	border: solid 2px var(--btn-primary) !important;
 	color: var(--text-color);
 }
 
-.custom-actions .btn{
+html body .custom-actions .btn{
 	font-size: 12px !important;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), div#driver-popover-item .driver-popover-footer .btn-group > button:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-group:not(:last-child) > .btn, div#driver-popover-item .driver-popover-footer .btn-group > .btn-group:not(:last-child) > button {
+html body .btn-group > .btn:not(:last-child):not(.dropdown-toggle), 
+html body div#driver-popover-item .driver-popover-footer .btn-group > button:not(:last-child):not(.dropdown-toggle), 
+html body .btn-group > .btn-group:not(:last-child) > .btn, 
+html body div#driver-popover-item .driver-popover-footer .btn-group > .btn-group:not(:last-child) > button {
 	border-top-right-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;  
 }
 
-.btn-group > .btn:not(:first-child), div#driver-popover-item .driver-popover-footer .btn-group > button:not(:first-child), .btn-group > .btn-group:not(:first-child) > .btn, div#driver-popover-item .driver-popover-footer .btn-group > .btn-group:not(:first-child) > button {
+html body .btn-group > .btn:not(:first-child), 
+html body div#driver-popover-item .driver-popover-footer .btn-group > button:not(:first-child), 
+html body .btn-group > .btn-group:not(:first-child) > .btn, 
+html body div#driver-popover-item .driver-popover-footer .btn-group > .btn-group:not(:first-child) > button {
 	border-top-left-radius: 0 !important;
 	border-bottom-left-radius: 0 !important;
 }
 
 /* POS DESIGN */
 
-.point-of-sale-app section { 
+html body .point-of-sale-app section { 
 	min-height: 40rem !important;
 }
 
-.client-wrapper ul {
+html body .client-wrapper ul {
 	padding-left: 22px;
 	margin-top: 0; 
 	margin-bottom:0;
 }
 
-.client-wrapper li {
+html body .client-wrapper li {
   float: left;
   list-style-type: none;
 }
 
-.client-wrapper li a { 
+html body .client-wrapper li a { 
 	display: inline-block;
 	text-decoration: none;
 	width: 100%; 
@@ -359,21 +423,25 @@ input[type="checkbox"]:checked {
 	text-align: center;
 }
 
-.client-wrapper li a.plus-pos, .client-wrapper li a.plus-pos:focus, .client-wrapper li a.plus-pos:hover{
+html body .client-wrapper li a.plus-pos, 
+html body .client-wrapper li a.plus-pos:focus, 
+html body .client-wrapper li a.plus-pos:hover{
         background-color: var(--gray-400) !important;
 }
 
-.client-wrapper li a.minus-pos, .client-wrapper li a.minus-pos:focus, .client-wrapper li a.minus-pos:hover{
+html body .client-wrapper li a.minus-pos, 
+html body .client-wrapper li a.minus-pos:focus, 
+html body .client-wrapper li a.minus-pos:hover{
 	background-color: var(--red-400) !important;
 }
 
-.client-wrapper li a:focus,
-.client-wrapper li a:hover {
+html body .client-wrapper li a:focus,
+html body .client-wrapper li a:hover {
   background-color: var(--gray-400) !important;
   color: black;
 }
 
-.client-wrapper li a.active {
+html body .client-wrapper li a.active {
   background-color:  white !important;
   color: black;
 }
