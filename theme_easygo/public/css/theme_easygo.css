@@ -416,3 +416,9 @@ html body .client-wrapper li a.active {
   background-color:  white !important;
   color: black;
 }
+
+html body .widget.shortcut-widget-box {
+    border: 1px solid var(--btn-primary)!important;
+    align-items: center !important;
+    padding: 10px 0px !important;
+}

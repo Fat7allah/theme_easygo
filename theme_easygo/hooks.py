@@ -227,3 +227,12 @@ doc_events = {
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+
+# Override login.bundle.css with higher priority
+website_context = {
+    "include_css": [
+        "/assets/theme_easygo/css/theme_easygo.css",
+        "/assets/theme_easygo/css/whitelabel.css",
+        "/files/whitelabel_custom.css"
+    ]
+}
